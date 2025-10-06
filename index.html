@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japjee Kaur - Personal Resume</title>
+    <!-- Load Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind to use Inter font -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'primary-dark': '#1F2937', // Deep Slate Gray
+                        'accent-gold': '#F59E0B', // Warm Amber/Gold
+                        'light-bg': '#F9FAFB', // Very Light Gray
+                        'text-gray': '#4B5563', // Medium Gray
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght=700&display=swap" rel="stylesheet">
+    <style>
+        /* Custom CSS for subtle effects and overrides */
+        .card-shadow {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease-in-out;
+        }
+        .card-shadow:hover {
+            transform: translateY(-5px);
+        }
+        /* Style for the Navigation active link (using class selector) */
+        .nav-link.active {
+            color: #F59E0B; /* Accent Gold */
+            border-bottom: 2px solid #F59E0B;
+        }
+    </style>
+</head>
+<body class="bg-light-bg font-sans text-primary-dark">
+
+    <!-- Header & Navigation Bar (Utilizing Flexbox for Layout) -->
+    <header class="sticky top-0 bg-white border-b border-gray-100 z-10">
+        <nav id="navbar" class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- ID Selector for the logo/name -->
+            <div id="logo" class="text-2xl font-serif font-bold text-primary-dark">
+                Japjee Kaur
+            </div>
+            
+            <!-- Navigation Links (Utilizing Flexbox for Spacing) -->
+            <div class="flex space-x-6 text-lg font-medium">
+                <a href="#about" class="nav-link active hover:text-accent-gold transition duration-200 py-1">About</a>
+                <a href="#education" class="nav-link hover:text-accent-gold transition duration-200 py-1">Education</a>
+                <a href="#interests" class="nav-link hover:text-accent-gold transition duration-200 py-1">Interests</a>
+                <a href="#contact" class="nav-link hover:text-accent-gold transition duration-200 py-1">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 mt-12 mb-20">
+
+        <!-- About/Introduction Section -->
+        <section id="about" class="mb-16 pt-4">
+            <div class="bg-white p-8 md:p-12 rounded-xl card-shadow flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-12">
+                <div class="md:w-3/4">
+                    <h1 class="text-5xl font-serif font-extrabold mb-3 leading-tight">
+                        Aspiring Strategist & Digital Innovator
+                    </h1>
+                    <p class="text-lg text-text-gray mb-6">
+                        Welcome to my professional space. I am **Japjee Kaur**, currently navigating the challenges and opportunities of the **DBE 24-27 program at IIM Bangalore**. My approach is driven by a unique blend of strategic academic rigor and a hands-on passion for **Digital Marketing**.
+                    </p>
+                    <p class="text-text-gray">
+                        I believe in integrating creative interests—like baking and badminton—with professional goals, fostering a well-rounded perspective that brings innovative solutions to complex business problems.
+                    </p>
+                </div>
+                <!-- Placeholder Image/Icon (Used element selector 'img') -->
+                <div class="md:w-1/4 flex justify-center">
+                    <img src="https://placehold.co/180x180/F59E0B/FFFFFF?text=JK" alt="Japjee Kaur Avatar Placeholder" class="rounded-full border-4 border-accent-gold object-cover shadow-lg" onerror="this.onerror=null;this.src='https://placehold.co/180x180/F59E0B/FFFFFF?text=JK'">
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="mb-16 pt-8">
+            <h2 class="text-4xl font-serif font-bold mb-8 text-primary-dark border-b-2 border-accent-gold inline-block pb-1">
+                Education
+            </h2>
+            <!-- Cards Layout (Utilizing Flexbox for horizontal alignment on desktop) -->
+            <div class="flex flex-col md:flex-row md:space-x-8 space-y-8 md:space-y-0">
+                
+                <!-- IIM B Card -->
+                <div class="bg-white p-6 rounded-xl card-shadow flex-1">
+                    <h3 class="text-2xl font-semibold text-accent-gold mb-2">IIM Bangalore</h3>
+                    <p class="text-xl font-medium text-primary-dark">DBE (2024 - 2027)</p>
+                    <p class="text-text-gray mt-3">
+                        Deepening expertise in business economics, strategy, and advanced management concepts. Focusing on quantitative methods and market analysis.
+                    </p>
+                </div>
+
+                <!-- DPS Jalandhar Card -->
+                <div class="bg-white p-6 rounded-xl card-shadow flex-1">
+                    <h3 class="text-2xl font-semibold text-accent-gold mb-2">DPS Jalandhar, Punjab</h3>
+                    <p class="text-xl font-medium text-primary-dark">High School</p>
+                    <p class="text-text-gray mt-3">
+                        Strong academic foundation with a focus on core subjects, developing discipline and a comprehensive skill set for higher education.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Focus Areas/Skills Section -->
+        <section id="interests" class="mb-16 pt-8">
+            <h2 class="text-4xl font-serif font-bold mb-8 text-primary-dark border-b-2 border-accent-gold inline-block pb-1">
+                Key Skills & Interests
+            </h2>
+            <!-- Skills Grid (Utilizing CSS Grid for 3-column Layout) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Digital Marketing Card -->
+                <div class="skill-card bg-white p-6 rounded-xl card-shadow border-l-4 border-accent-gold">
+                    <h3 class="text-xl font-semibold mb-2 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent-gold mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                        Digital Marketing Strategy
+                    </h3>
+                    <p class="text-text-gray">
+                        Proficient in SEO, content strategy, and social media campaigns. Focused on ROI-driven customer acquisition.
+                    </p>
+                </div>
+
+                <!-- Baking Card -->
+                <div class="skill-card bg-white p-6 rounded-xl card-shadow border-l-4 border-accent-gold">
+                    <h3 class="text-xl font-semibold mb-2 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent-gold mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 15.546c-.523 0-1.046.126-1.546.376-1.564.783-3.13 1.175-4.696 1.175H8.232c-1.566 0-3.13-.392-4.696-1.175C3.046 15.672 2.523 15.546 2 15.546V12c0-1.564.392-3.13.783-4.696.25-.5.376-1.023.376-1.546V5.5c0-1.1.9-2 2-2h12c1.1 0 2 .9 2 2v.292c.523 0 1.046.126 1.546.376C18.966 5.864 21 6.864 21 9v6.546zM15 13H9m4-4h2m-4 0h-2" />
+                        </svg>
+                        Baking & Culinary Arts
+                    </h3>
+                    <p class="text-text-gray">
+                        A dedicated passion for baking, requiring meticulous attention to detail, precision, and presentation skills.
+                    </p>
+                </div>
+
+                <!-- Badminton Card -->
+                <div class="skill-card bg-white p-6 rounded-xl card-shadow border-l-4 border-accent-gold">
+                    <h3 class="text-xl font-semibold mb-2 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-accent-gold mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                        </svg>
+                        Badminton & Teamwork
+                    </h3>
+                    <p class="text-text-gray">
+                        Competitive player demonstrating strategic thinking, quick reflexes, and strong sportsmanship and teamwork.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="pt-8">
+            <h2 class="text-4xl font-serif font-bold mb-8 text-primary-dark border-b-2 border-accent-gold inline-block pb-1">
+                Get in Touch
+            </h2>
+            <div class="bg-white p-8 rounded-xl card-shadow max-w-2xl mx-auto">
+                <p class="text-lg text-text-gray mb-6 text-center">
+                    I am open to discussing collaborations, academic projects, or digital marketing insights.
+                </p>
+                <form class="space-y-4">
+                    <!-- Example of Class Selector usage -->
+                    <div class="form-group">
+                        <label for="name" class="block text-sm font-medium text-primary-dark">Name</label>
+                        <input type="text" id="name" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-accent-gold focus:border-accent-gold" placeholder="Your Name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="block text-sm font-medium text-primary-dark">Email</label>
+                        <input type="email" id="email" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-accent-gold focus:border-accent-gold" placeholder="you@example.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message" class="block text-sm font-medium text-primary-dark">Message</label>
+                        <textarea id="message" rows="4" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-accent-gold focus:border-accent-gold" placeholder="Your message..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="w-full py-3 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-primary-dark hover:bg-gray-700 transition duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent-gold">
+                        Send Message
+                    </button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer (Using simple Flexbox centered layout) -->
+    <footer class="bg-primary-dark text-white py-6 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 Japjee Kaur. All rights reserved.</p>
+            <p class="text-sm mt-2 text-gray-400">Built with a focus on usability and modern web design.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple JavaScript for the 'active' navigation link functionality (Scrollspy)
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('section');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => link.classList.remove('active'));
+                        const currentLink = document.querySelector(`.nav-link[href="#${entry.target.id}"]`);
+                        if (currentLink) {
+                            currentLink.classList.add('active');
+                        }
+                    }
+                });
+            }, {
+                rootMargin: '0px 0px -50% 0px',
+                threshold: 0.1
+            });
+
+            sections.forEach(section => observer.observe(section));
+        });
+    </script>
+
+</body>
+</html>
